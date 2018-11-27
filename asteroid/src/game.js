@@ -10,7 +10,7 @@ function Game() {
   this.DIM_Y = 500;
   this.NUM_ASTEROIDS = 5;
   this.asteroids = [];
-  addAsteroids();
+  this.addAsteroids();
 }
 
 Game.prototype.randomPosition = function () {
@@ -20,9 +20,9 @@ Game.prototype.randomPosition = function () {
 };
 
 Game.prototype.addAsteroids = function() {
-  for (let i = 0; i < NUM_ASTEROIDS; i++ ) {
+  for (let i = 0; i < this.NUM_ASTEROIDS; i++ ) {
     this.asteroids.push(
-      new Asteroid({pos: randomPosition()})
+      new Asteroid({pos: this.randomPosition()})
     );
   }
 };

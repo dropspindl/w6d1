@@ -21,7 +21,7 @@ const carl = new Asteroid({
 window.carl = carl;
 
 const jerry = new Game();
-window.jerry = jerry
+window.jerry = jerry;
 
 document.addEventListener("DOMContentLoaded", function(event){
   const canvas = document.getElementById("game-canvas");
